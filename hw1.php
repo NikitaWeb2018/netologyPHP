@@ -25,7 +25,7 @@ $about = "Хочу знать php лучше всех!!!";
       <dl>
         <dt>Имя</dt><dd><?= $name?></dd>
         <dt>Возраст</dt><dd><?= $age?></dd>
-        <dt>Электронная почта</dt><a href="mailto:$email"><?= $email?></a></dd>
+        <dt>Электронная почта</dt><dd><a href="mailto:<?= $email?>"><?= $email?></a></dd>
         <dt>Город</dt><dd><?= $city?></dd>
         <dt>О себе</dt><dd><?= $about?></dd>
       </dl>
