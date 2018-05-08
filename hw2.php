@@ -5,15 +5,15 @@ $var1 = 1;
 $var2 = 1;
 
 
-echo "Число пользователя $random".PHP_EOL;
+echo nl2br ("Число пользователя: $random\n");
 
 do {
     if ($var1 > $random) {
-        echo "Число не входит в числовой ряд";
+        echo "Число не входит в числовой ряд!";
         break;
     }
     elseif ($var1 == $random) {
-        echo "Число входит в числовой ряд";
+        echo "Число входит в числовой ряд!";
         break;
     }
     else
