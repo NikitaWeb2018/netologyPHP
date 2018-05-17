@@ -1,0 +1,22 @@
+[
+  {
+    "firstName": "Иван",
+    "lastName": "Иванов",
+    "address": "г. Москва, ул. Алиева, 2",
+    "phoneNumber": "812 123-1234"
+  },
+
+  {
+    "firstName": "Петр",
+    "lastName": "Петров",
+    "address": "г. Самара, ул. Алиева, 2",
+    "phoneNumber": "811 324-1434"
+  },
+
+  {
+    "firstName": "Никита",
+    "lastName": "Симонов",
+    "address": "г. Самара, ул. Садовая, 2",
+    "phoneNumber": "912 563-4829"
+  }
+]
