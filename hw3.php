@@ -9,27 +9,24 @@ $animals = [
     'North America' => ['Mammuthus columbi', 'Lepus othus', 'Scalopus aquaticus']
 ];
 
-$newAnimals = [];
 foreach ($animals as $continents => $animalsArray) {
     foreach ($animalsArray as $animalName) {
         if (strpos($animalName,' ') !== false) {
-            array_push($newAnimals, $animalName);
+            $newAnimals[] = $animalName;
         }
     }
 }
 
-print_r($newAnimals);
-
-$firstNames = array_map(function($a){return explode(' ', $a)[0];}, $newAnimals);
-$secondNames = array_map(function($a){return explode(' ', $a)[1];}, $newAnimals);
+$firstNames = array_map(function($animalName){return explode(' ', $animalName)[0];}, $newAnimals);
+$secondNames = array_map(function($animalName){return explode(' ', $animalName)[1];}, $newAnimals);
 
 shuffle($firstNames);
 shuffle($secondNames);
 
-$randomAnimals = array();
-for($i = 0; $i < sizeof($newAnimals); $i++){
-    array_push($randomAnimals, $firstNames[$i]." ".$secondNames[$i]);
+for($i = 0; $i < count($newAnimals); $i++){
+    $randomAnimals[] = $firstNames[$i]." ".$secondNames[$i];
 }
-print_r($randomAnimals);
+
+var_dump($randomAnimals);
 
 ?>
