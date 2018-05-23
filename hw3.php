@@ -17,8 +17,14 @@ foreach ($animals as $continents => $animalsArray) {
     }
 }
 
-$firstNames = array_map(function($animalName){return explode(' ', $animalName)[0];}, $newAnimals);
-$secondNames = array_map(function($animalName){return explode(' ', $animalName)[1];}, $newAnimals);
+foreach ($newAnimals as $animalName) {
+    $firstNames[] = explode(' ', $animalName)[0];
+}
+
+foreach ($newAnimals as $animalName) {
+    $secondNames[] = explode(' ', $animalName)[1];
+}
+
 
 shuffle($firstNames);
 shuffle($secondNames);
