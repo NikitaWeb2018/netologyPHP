@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: simonov
- * Date: 24.05.2018
- * Time: 2:15
- */
 
 $link = 'http://api.openweathermap.org/data/2.5/forecast';
 $city = '499099';
