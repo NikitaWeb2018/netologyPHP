@@ -1,7 +1,7 @@
 <?php
 
 $animals = [
-    'Europe' => ['Felis silvestris', 'Alopex sfdfsdf fsdfdsf sdfsdfsd', 'Phoca vitulina'],
+    'Europe' => ['Felis silvestris', 'Alopex', 'Phoca vitulina'],
     'Africa' => ['Antellidae', 'Homopus femoralis', 'Pelusios nanus'],
     'Asia' => ['Bos javanicus', 'Gaurus', 'Elephantidae'],
     'Antarctica' => ['Rossii', 'Orcinus orca', 'Scolimastra jubini'],
@@ -12,13 +12,15 @@ $animals = [
 
 foreach ($animals as $continents => $animalsArray) {
     foreach ($animalsArray as $animalName) {
-        if (strpos($animalName,' ') !== false) {
+        if (count(explode(' ', $animalName)) == 2) {
             $newAnimals[] = $animalName;
             $firstNames[] = explode(' ', $animalName)[0];
             $secondNames[] = explode(' ', $animalName)[1];
         }
     }
 }
+
+
 
 shuffle($firstNames);
 shuffle($secondNames);
