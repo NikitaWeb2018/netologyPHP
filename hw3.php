@@ -10,6 +10,7 @@ $animals = [
     'North America' => ['Mammuthus columbi', 'Lepus othus', 'Scalopus aquaticus']
 ];
 
+$newAnimals = [];
 foreach ($animals as $continents => $animalsArray) {
     foreach ($animalsArray as $animalName) {
         if (count(explode(' ', $animalName)) == 2) {
@@ -20,11 +21,10 @@ foreach ($animals as $continents => $animalsArray) {
     }
 }
 
-
-
 shuffle($firstNames);
 shuffle($secondNames);
 
+$randomAnimals = [];
 for($i = 0; $i < count($newAnimals); $i++){
     $randomAnimals[] = $firstNames[$i]." ".$secondNames[$i];
 }
